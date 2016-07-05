@@ -1,0 +1,27 @@
+<h1>Home</h1>
+<p>You're logged in!!</p>
+<table class="table tabel-borded">
+<tr>
+<td> Status</td><td>{{username.success}}</td>
+</tr>
+<tr>
+<td> Key</td><td>{{username.key}}</td>
+</tr>
+<tr>
+<td> username</td><td>{{username.username}}</td>
+</tr>
+<tr>
+<td> Fullname</td><td>{{username.fullname}}</td>
+</tr>
+<tr>
+<td> Create Date</td><td>{{username.createDate}}</td>
+</tr>
+<tr>
+<td colspan="2"> 
+<br>
+<div class="alert alert-warning">Note: your session is expires after 1day </div>
+</td>
+</tr>
+
+</table>
+<p><button ng-click="logout('/login')" class="btn btn-danger">Logout</button></p>

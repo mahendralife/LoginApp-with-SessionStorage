@@ -1,0 +1,125 @@
+<main>
+	<h2>AngularJS - Login Application-PHP web services</h2>
+	<p> Native stand-alone application make a angularJs services based on Ngcookies  serving access permissions from Server</p>
+	
+	<p><strong>Features: </strong></p>
+	<ul>
+	<li>Validate session </li>
+	<li>Authenticate Pages</li>
+	<li>Destroy session and clear data</li>
+	
+
+	</ul>
+	<hr>
+	<div class="col-sm-6">
+<dl>
+  <dt>$http request to login </dt>
+  <dd>
+  		<dt>Method</dt>
+  		<dd>
+  			<code>
+  					authenticate.login(data,loginUrl, callback);<br>
+  					<p>data: json structure to send server eg.  <br>{username:"mahendra","password":"123456","remember":true} </p>
+  					<p>loginUrl: request url eg. http://localhost/webservices/login</p>
+  					<p> callback : function() received data form seerver side </p>
+
+  			</code>
+  			<p>
+  			<code>
+  				authenticate.login(data,loginUrl, <br>function(response){
+					if(response.valid==true) <br>
+					{<br>
+						//if username and password is valid<br>
+					}<br>
+					else if(response.valid==false)<br>
+					{<br>
+						//if username or password is invalid<br>
+						
+					}<br>
+
+			})
+  			</code>
+  			</p>
+  		</dd>
+  </dd>
+  <hr>
+  <dt>Set session data on local system</dt>
+  <dd>
+  		<p><strong>Method</strong></p>
+  		<code>
+  		authenticate.setAuthenticatedUser(response);<br>
+  		<p>response: json structure eg. <br>{valid:"true",key:"121212121",username:"mahendra.singh"}
+
+  		</p>
+  		</code>
+
+  </dd>
+</dl>
+</div>
+
+<div class="col-sm-6">
+<dt>Check session on local system</dt>
+  <dd>
+  		<p><strong>Method</strong></p>
+  		<code>
+  		authenticate.validateSession()<br>
+  		<p>
+  		this function return true if valid session otherwise return false
+  		</p>
+  		</code>
+
+  </dd>
+</dl>
+<hr>
+
+<dt>Page authorization  <small>User don't access page without login</small></dt>
+  <dd>
+  		<p><strong>Method</strong></p>
+  		<code>
+  		define array<br>
+  		pages=['/services',"/"] <br>
+
+  		 authenticate.pageAuth(currentPath,loginPagePth)<br>
+  		<p>
+  		currentPath: set the current page location <br>
+  		loginPath : set login page path if you want to redirect
+  		</p>
+  		</code>
+
+  </dd>
+</dl>
+
+<hr>
+
+<dt>Page authorization  <small>User allow to access page without login</small></dt>
+  <dd>
+  		<p><strong>Method</strong></p>
+  		<code>
+  		define array<br>
+  		pages=['/abouts',"/docs"] <br>
+
+  		  authenticate.pageAuthInvalid(currentPath,redirect);<br>
+  		<p>
+  		currentPath: set the current page location <br>
+  		redirect : if you want to redirect and other page
+  		</p>
+  		</code>
+
+  </dd>
+</dl>
+<dt>Logout <small>Clear data or session</small></dt>
+  <dd>
+  		<p><strong>Method</strong></p>
+  		<code>
+  	  		 authenticate.removeAuthenticatedUser();<br>
+  		<p>
+  		remove all data form local session
+  		</p>
+  		</code>
+
+  </dd>
+</dl>
+
+</div>
+<div class="clearfix"></div>
+</main>

@@ -1,0 +1,64 @@
+/*custom css file*/
+body {background-color: #eee;}
+main {    border: 1px #CCCCCC solid;
+      padding: 15px 15px 30px 15px;
+    background: 'whitesmoke';
+    border-radius: 9px;}
+    label small{ font-style: italic;  color: gray; font-weight: 300;}
+form .form-group{ position: relative; margin-bottom: 20px}
+form .form-group .left-icon
+{
+    position: absolute;
+    left: 10px;
+    height: 29px;
+    top: 30px;
+    line-height: 31px;
+    background-color: inherit;
+    font-size: 18px;
+    color: gray;
+    border-right: 1px #C7C2C2 solid;
+    padding-right: 9px;
+    width: 25px;
+}
+form .form-group .form-control { 
+	border-radius: 2px;
+	 height: 40px;
+	 padding-left:40px;
+	}
+error{position: absolute;
+    width: 100%;
+   
+    font-size: 13px;
+    color: #F53939;}
+error i{
+    position: absolute;
+    right: 12px;
+    top: -30px;
+    font-size: 20px !important;
+    }
+    .form-actions { margin-top:15px;}
+   .alert {
+    padding: 5px 15px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    font-size: 13px;
+}
+h2{margin: 0;
+    color: #F54545;
+    font-size: 21px;
+    border-bottom: 2px #F54545 solid;
+    margin-bottom: 20px;
+}
+.navbar-right{ margin-top: 7px;}
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #CEC7C7;
+}
+/*.ng-enter
+.ng-leave
+.ng-enter-active 
+.ng-leave-active
+*/

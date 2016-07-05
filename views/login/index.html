@@ -1,0 +1,42 @@
+ <main>
+<div class="col-xs-offset-4 col-xs-4">
+ <h2>Login to admin console</h2>
+ 
+<form name="form"  role="form" novalidate autocomplete="off">
+    <div class="alert alert-danger" ng-show="msg"> {{msg}}</div>
+    <div class="form-group">
+        <label for="username">Username <small>( test )</small></label>
+        <i class="fa fa-key left-icon"></i>
+        <input type="text" name="username" id="username" class="form-control" ng-model="data.username" required placeholder="Username" />
+
+         <error ng-show="form.username.$dirty && form.username.$error.required" >
+         <i  class="fa fa-exclamation"></i> Username is required</error>
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password <small>( test )</small></label>
+        <i class="fa fa-lock left-icon"></i>
+        <input type="password" name="password" id="password" class="form-control" ng-model="data.password" required placeholder="Password" />
+        <error ng-show="form.password.$dirty && form.password.$error.required" >
+        <i  class="fa fa-exclamation"></i> Password is required</error>
+    </div>
+    <div class="form-group">
+    <div class="checkbox">
+             <label> <input type="checkbox" ng-model="data.remember" name="remember" id="remember">  Remember me on this computer</label>
+    </div>
+    </div>
+    <div class="form-actions">
+
+        <button type="submit" ng-click="login(form,data)" ng-disabled="isLoading" class="btn btn-primary btn-block">   <span ng-hide="isLoading">Login to admin</span>
+            <span ng-show="isLoading">
+            <i class="fa fa-spinner fa-spin" aria-hidden="true"></i> Processing..</span>
+
+        </button>
+
+    </div>
+
+</form>
+
+</div>
+<div class="clearfix"></div>
+</main
